@@ -5,15 +5,12 @@ import { useCallback } from "react";
 
 const DragAndDrop = () => {
   const handleFileUpload = (text) => {
-    // Faça o que precisar com o texto do arquivo aqui
     console.log("Texto do arquivo:", text);
   };
-  const FileUploader = ({ onFileUploaded }) => {
+  const FileUploader = ({ onFileUploaded, children }) => {
     const onDrop = useCallback(
       (acceptedFiles) => {
         const file = acceptedFiles[0];
-
-        // Ler o conteúdo do arquivo como texto
         const reader = new FileReader();
         reader.onload = () => {
           const text = reader.result;
@@ -29,18 +26,18 @@ const DragAndDrop = () => {
     return (
       <div {...getRootProps()}>
         <input {...getInputProps()} />
-        <FaFileDownload className="drag-and-drop-icon" />
+        {children}
       </div>
     );
   };
 
   return (
     <div className="drag-and-drop-container">
-      <div className="drag-and-drop-content">
-        <div>
-          <FileUploader onFileUploaded={handleFileUpload} />
+      <FileUploader onFileUploaded={handleFileUpload}>
+        <div className="drag-and-drop-content">
+        <FaFileDownload className="drag-and-drop-icon" />
         </div>
-      </div>
+      </FileUploader>
     </div>
   );
 };
