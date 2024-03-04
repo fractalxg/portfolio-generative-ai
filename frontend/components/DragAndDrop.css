@@ -1,0 +1,17 @@
+.drag-and-drop-container {
+  display: flex;
+  height: 91.5vh;
+  justify-content: center;
+  align-items: center;
+}
+.drag-and-drop-content {
+    display: grid;
+  border: 5px dotted #b3b3b3;
+  border-radius: 10px;
+  padding: 200px;
+}
+.drag-and-drop-icon{
+    height: 100px;
+    width: 100px;
+    color: #b3b3b3;
+}

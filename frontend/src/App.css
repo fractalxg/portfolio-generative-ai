@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-1:#fff5ef;
+    --color-2:#c91313;
+}

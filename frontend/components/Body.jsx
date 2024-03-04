@@ -1,8 +1,11 @@
 import "./Body.css"
+import DragAndDrop from "./DragAndDrop"
 
 const Body = () => {
   return (
-    <div>Body</div>
+    <div className="body-container">
+        <DragAndDrop />
+    </div>
   )
 }
 

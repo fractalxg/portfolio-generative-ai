@@ -1,5 +1,4 @@
 import Body from "../components/Body"
-import Footer from "../components/Footer"
 import Header from "../components/Header"
 import "./Home.css"
 
@@ -8,7 +7,6 @@ const Home = () => {
     <div>
         <Header />
         <Body />
-        <Footer />
     </div>
   )
 }
