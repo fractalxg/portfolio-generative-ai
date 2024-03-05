@@ -35,7 +35,7 @@ const DragAndDrop = () => {
     <div className="drag-and-drop-container">
       <FileUploader onFileUploaded={handleFileUpload}>
         <div className="drag-and-drop-content">
-        <FaFileDownload className="drag-and-drop-icon" />
+          <FaFileDownload className="drag-and-drop-icon" />
         </div>
       </FileUploader>
     </div>
