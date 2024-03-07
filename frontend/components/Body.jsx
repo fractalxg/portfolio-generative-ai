@@ -5,6 +5,7 @@ const Body = () => {
   return (
     <div className="body-container">
         <DragAndDrop />
+        
     </div>
   )
 }
