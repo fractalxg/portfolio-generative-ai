@@ -4,21 +4,18 @@ import { useDropzone } from "react-dropzone";
 import { useCallback, useState } from "react";
 
 const DragAndDrop = () => {
-  const [text, setText] = useState("")
+  const [text, setText] = useState("");
 
   const FileUploader = ({ children }) => {
-    const onDrop = useCallback(
-      (acceptedFiles) => {
-        const file = acceptedFiles[0];
-        const reader = new FileReader();
-        reader.onload = () => {
-          const text = reader.result;
-          setText(text)
-        };
-        reader.readAsText(file);
-      },
-      []
-    );
+    const onDrop = (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        const text = reader.result;
+        setText(text);
+      };
+      reader.readAsText(file);
+    };
 
     const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
