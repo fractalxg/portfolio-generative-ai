@@ -1,24 +1,23 @@
 import "./DragAndDrop.css";
 import { FaFileDownload } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 const DragAndDrop = () => {
-  const handleFileUpload = (text) => {
-    console.log("Texto do arquivo:", text);
-  };
-  const FileUploader = ({ onFileUploaded, children }) => {
+  const [text, setText] = useState("")
+
+  const FileUploader = ({ children }) => {
     const onDrop = useCallback(
       (acceptedFiles) => {
         const file = acceptedFiles[0];
         const reader = new FileReader();
         reader.onload = () => {
           const text = reader.result;
-          onFileUploaded(text);
+          setText(text)
         };
         reader.readAsText(file);
       },
-      [onFileUploaded]
+      []
     );
 
     const { getRootProps, getInputProps } = useDropzone({ onDrop });
@@ -32,13 +31,18 @@ const DragAndDrop = () => {
   };
 
   return (
-    <div className="drag-and-drop-container">
-      <FileUploader onFileUploaded={handleFileUpload}>
-        <div className="drag-and-drop-content">
-          <FaFileDownload className="drag-and-drop-icon" />
-        </div>
-      </FileUploader>
-    </div>
+    <>
+      <div className="drag-and-drop-container">
+        <FileUploader>
+          <div className="drag-and-drop-content">
+            <FaFileDownload className="drag-and-drop-icon" />
+          </div>
+        </FileUploader>
+      </div>
+      <div className="text-container">
+        <p>{text}</p>
+      </div>
+    </>
   );
 };
 
