@@ -7,6 +7,9 @@ const Body = () => {
   return (
     <div className="body-container">
       <DragAndDrop setDragAndDropText={setDragAndDropText} />
+      <div className="body-text-drag-and-drop-container">
+        <p>{dragAndDropText}</p>
+      </div>
     </div>
   );
 };
