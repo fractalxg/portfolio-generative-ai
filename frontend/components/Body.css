@@ -19,4 +19,12 @@
     width: 100%;
     font-size: 16px;
     height: 100px;
+    border-color: #727272;
+}
+
+.body-text-area-container textarea:focus{
+    outline: none;
+}
+.body-text-area-container textarea:hover{
+    border-color: #727272;
 }

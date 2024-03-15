@@ -7,15 +7,18 @@ const Body = () => {
   return (
     <div className="body-container">
       <DragAndDrop setDragAndDropText={setDragAndDropText} />
-      {dragAndDropText.length > 1 ? <h2>Received Text</h2> : null}
-      <div className="body-text-drag-and-drop-container">
-        <p>{dragAndDropText}</p>
-      </div>
-      <h2>Type your prompt</h2>
-      <div className="body-text-area-container">
-        
-        <textarea></textarea>
-      </div>
+      {dragAndDropText.length > 1 ? (
+        <div>
+          <h2>Received Text</h2>
+          <div className="body-text-drag-and-drop-container">
+            <p>{dragAndDropText}</p>
+          </div>
+          <h2>Type your prompt</h2>
+          <div className="body-text-area-container">
+            <textarea></textarea>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
