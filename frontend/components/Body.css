@@ -1,9 +1,22 @@
 .body-container{
     margin-top: 80px;
     background-color: var(--color-1);
+    width: 100%;
+}
+
+.body-container h2 {
+    padding: 20px 40px 0px 40px;
 }
 
 .body-text-drag-and-drop-container{
     padding: 20px 40px 0px 40px;
     text-align: justify;
+}
+.body-text-area-container{
+    padding: 20px 40px 80px 40px;
+}
+.body-text-area-container textarea{
+    width: 100%;
+    font-size: 16px;
+    height: 100px;
 }
