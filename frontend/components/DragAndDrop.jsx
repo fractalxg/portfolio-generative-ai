@@ -1,17 +1,16 @@
 import "./DragAndDrop.css";
-import { FaFileDownload } from "react-icons/fa";
+import { MdOutlineFileUpload } from "react-icons/md";
 import { useDropzone } from "react-dropzone";
 import { useState } from "react";
 
-const DragAndDrop = ({setDragAndDropText}) => {
-
+const DragAndDrop = ({ setDragAndDropText }) => {
   const FileUploader = ({ children }) => {
     const onDrop = (acceptedFiles) => {
       const file = acceptedFiles[0];
       const reader = new FileReader();
       reader.onload = () => {
         const text = reader.result;
-        setDragAndDropText(text)
+        setDragAndDropText(text);
       };
       reader.readAsText(file);
     };
@@ -31,7 +30,10 @@ const DragAndDrop = ({setDragAndDropText}) => {
       <div className="drag-and-drop-container">
         <FileUploader>
           <div className="drag-and-drop-content">
-            <FaFileDownload className="drag-and-drop-icon" />
+            <MdOutlineFileUpload className="drag-and-drop-icon" />
+            <div className="drag-and-drop-text">
+              <p>Click here or drag and drop your file.</p>
+            </div>
           </div>
         </FileUploader>
       </div>

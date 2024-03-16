@@ -1,5 +1,4 @@
 .drag-and-drop-container {
-
 }
 .drag-and-drop-content {
   display: grid;
@@ -11,17 +10,22 @@
   margin-left: 100px;
   margin-right: 100px;
 }
-.drag-and-drop-content:hover{
+.drag-and-drop-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #b3b3b3;
+}
+
+.drag-and-drop-content:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 .drag-and-drop-content:hover .drag-and-drop-icon {
-
 }
 .drag-and-drop-icon {
   height: 100px;
   width: 100px;
+  width: 100%;
   color: #b3b3b3;
 }
-
-
