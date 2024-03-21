@@ -9,12 +9,19 @@ const openai = new OpenAI({
 });
 
 router.get("/prompt", async (req, res) => {
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo-instruct",
-      message: [{"role":"user","content":"Say this is a test."}],
-      max_tokens: 10,
-      temperature: 0,
-    });
+  const prompt = req.body;
+  const response = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo-instruct",
+    message: [
+      {
+        role: "user",
+        content: `According to the following text:${prompt.promptData}, 
+        Answer the following question:${prompt.promptMessage} `,
+      },
+    ],
+    max_tokens: 100,
+    temperature: 0,
+  });
   res.send(response);
 });
 
