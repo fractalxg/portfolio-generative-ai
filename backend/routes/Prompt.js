@@ -8,7 +8,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPEN_AI_API_KEY,
 });
 
-router.get("/prompt", async (req, res) => {
+router.post("/prompt", async (req, res) => {
   const prompt = req.body;
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-instruct",
