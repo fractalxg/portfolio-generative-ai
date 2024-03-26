@@ -1,9 +1,12 @@
 import "./Body.css";
 import DragAndDrop from "./DragAndDrop";
+import { IoMdSend } from "react-icons/io";
 import { useState } from "react";
 
 const Body = () => {
   const [dragAndDropText, setDragAndDropText] = useState("");
+
+
   return (
     <div className="body-container">
       <DragAndDrop setDragAndDropText={setDragAndDropText} />
@@ -17,6 +20,7 @@ const Body = () => {
           <h2>Type your prompt</h2>
           <div className="body-text-area-container">
             <textarea></textarea>
+            <button className="send-prompt"><IoMdSend /></button>
           </div>
         </div>
       ) : null}
