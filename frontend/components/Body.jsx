@@ -7,14 +7,13 @@ import axios from "axios";
 const Body = () => {
   const [dragAndDropText, setDragAndDropText] = useState("");
   const [promptResponse, setPromptResponse] = useState("");
-  const [promptData, setPromptData] = useState("");
   const [promptValue, setPromptValue] = useState("");
 
   const handleTextAreaInput = async () => {
     const getPromptResponse = await axios.post(
       import.meta.env.VITE_PROMPT_API,
       {
-        promptData,
+        promptData: dragAndDropText,
         promptValue,
       }
     );
@@ -33,8 +32,13 @@ const Body = () => {
 
           <h2>Type your prompt</h2>
           <div className="body-text-area-container">
-            <textarea></textarea>
-            <button className="send-prompt">
+            <textarea
+              onChange={(e) => setPromptValue(e.target.value)}
+            ></textarea>
+            <button
+              className="send-prompt"
+              onClick={() => handleTextAreaInput()}
+            >
               <IoMdSend />
             </button>
           </div>
