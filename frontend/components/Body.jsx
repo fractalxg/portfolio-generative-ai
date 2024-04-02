@@ -9,7 +9,7 @@ const Body = () => {
   const [promptResponse, setPromptResponse] = useState("");
   const [promptValue, setPromptValue] = useState("");
 
-  const handleTextAreaInput = async () => {
+  const handlePrompt = async () => {
     const getPromptResponse = await axios.post(
       import.meta.env.VITE_PROMPT_API,
       {
@@ -19,6 +19,10 @@ const Body = () => {
     );
     setPromptResponse(getPromptResponse);
   };
+
+  const handleTextAreaInput = (value) => {
+    setPromptValue(value)
+  }
 
   return (
     <div className="body-container">
@@ -33,11 +37,11 @@ const Body = () => {
           <h2>Type your prompt</h2>
           <div className="body-text-area-container">
             <textarea
-              onChange={(e) => setPromptValue(e.target.value)}
+              onChange={(e) => handleTextAreaInput(e.target.value)}
             ></textarea>
             <button
               className="send-prompt"
-              onClick={() => handleTextAreaInput()}
+              onClick={() => handlePrompt()}
             >
               <IoMdSend />
             </button>
