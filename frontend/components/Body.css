@@ -13,7 +13,7 @@
   text-align: justify;
 }
 .body-text-area-container {
-  padding: 20px 40px 80px 40px;
+  padding: 20px 40px 20px 40px;
 }
 
 .body-text-area-container textarea {
@@ -97,3 +97,9 @@
   color: #fff;
   background-color: #333;
 }
+
+.body-generated-answear-content{
+  padding: 20px 40px 80px 40px;
+}
+
+
