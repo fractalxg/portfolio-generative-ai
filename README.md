@@ -1,3 +1,4 @@
+(em construção)
 ## Descrição
 Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos de texto com a LLM da OpenAI. 
 
