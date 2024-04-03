@@ -27,9 +27,9 @@ const Body = () => {
   };
 
   const handleReloadFile = () => {
-    setDragAndDropVisibility(true)
-    setDragAndDropText("")
-  }
+    setDragAndDropVisibility(true);
+    setDragAndDropText("");
+  };
 
   useEffect(() => {
     dragAndDropText.length > 1 ? setDragAndDropVisibility(false) : null;
@@ -45,8 +45,14 @@ const Body = () => {
           <h2>Received Text</h2>
           <div className="body-text-drag-and-drop-container">
             <p>{dragAndDropText}</p>
-            <button className="reload-file" onClick={() => handleReloadFile()}>
-              <p>Reload File</p>
+
+            {/* <button className="reload-file" onClick={() => handleReloadFile()}>
+              <p>Hide Text</p>
+              <SlReload />
+            </button> */}
+
+            <button className="change-file" onClick={() => handleReloadFile()}>
+              <p>Change File</p>
               <SlReload />
             </button>
           </div>

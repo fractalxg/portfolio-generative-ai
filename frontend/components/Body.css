@@ -29,7 +29,7 @@
 .body-text-area-container textarea:hover {
   border-color: #727272;
 }
-.reload-file {
+.change-file {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +45,7 @@
   background-color: #ffffff;
   gap: 10px;
 }
-.reload-file:hover {
+.change-file:hover {
   cursor: pointer;
   box-shadow: 0 0 #333;
   color: #fff;
