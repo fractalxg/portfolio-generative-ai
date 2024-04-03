@@ -1,6 +1,11 @@
-(em construção)
-Analisador de arquivos utilizando a API da OpenAI (ChatGPT)
+## Descrição
+Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos de texto com a LLM da OpenAI. 
 
-![Opera Instantâneo_2024-03-26_192226_localhost](https://github.com/fractalxg/portfolio-openai/assets/147837025/da48b5b3-87fc-45c1-bbf6-79c8c224a478)
+## Funcionalidades
+* Conversão de Arquivos de Texto.
+* Analisador de Texto com o Chat GPT.
 
+## Screenshots
+* Web
 
+![Opera Instantâneo_2024-04-03_182021_localhost](https://github.com/fractalxg/portfolio-openai/assets/147837025/616bbec8-deea-4135-9dcd-67bc6a2b9477)
