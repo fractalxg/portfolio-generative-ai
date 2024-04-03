@@ -10,6 +10,7 @@ const Body = () => {
   const [promptResponse, setPromptResponse] = useState("");
   const [promptValue, setPromptValue] = useState("");
   const [dragAndDropVisibility, setDragAndDropVisibility] = useState(true);
+  const [hideShowText, setHideShowText] = useState("Hide Text");
 
   const handlePrompt = async () => {
     const getPromptResponse = await axios.post(
@@ -31,6 +32,12 @@ const Body = () => {
     setDragAndDropText("");
   };
 
+  const handleHideShowText = () => {
+    hideShowText === "Hide Text"
+      ? setHideShowText("Show Text")
+      : setHideShowText("Hide Text");
+  };
+
   useEffect(() => {
     dragAndDropText.length > 1 ? setDragAndDropVisibility(false) : null;
   }, [dragAndDropText]);
@@ -44,12 +51,14 @@ const Body = () => {
         <div className="body-container-elements">
           <h2>Received Text</h2>
           <div className="body-text-drag-and-drop-container">
-            <p>{dragAndDropText}</p>
+            {hideShowText === "Hide Text" ? <p>{dragAndDropText}</p> : null}
 
-            {/* <button className="reload-file" onClick={() => handleReloadFile()}>
-              <p>Hide Text</p>
-              <SlReload />
-            </button> */}
+            <button
+              className="hide-show-text"
+              onClick={() => handleHideShowText()}
+            >
+              <p>{hideShowText}</p>
+            </button>
 
             <button className="change-file" onClick={() => handleReloadFile()}>
               <p>Change File</p>
