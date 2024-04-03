@@ -1,32 +1,39 @@
 import "./Body.css";
 import DragAndDrop from "./DragAndDrop";
 import { IoMdSend } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Body = () => {
   const [dragAndDropText, setDragAndDropText] = useState("");
   const [promptResponse, setPromptResponse] = useState("");
   const [promptValue, setPromptValue] = useState("");
+  const [dragAndDropVisibility, setDragAndDropVisibility] = useState(true);
 
   const handlePrompt = async () => {
     const getPromptResponse = await axios.post(
       import.meta.env.VITE_PROMPT_API,
       {
         promptData: dragAndDropText,
-        promptValue,
+        promptValue: promptValue,
       }
     );
     setPromptResponse(getPromptResponse);
   };
 
   const handleTextAreaInput = (value) => {
-    setPromptValue(value)
-  }
+    setPromptValue(value);
+  };
+
+  useEffect(() => {
+    dragAndDropText.length > 1 ? setDragAndDropVisibility(false) : null;
+  }, [dragAndDropText]);
 
   return (
     <div className="body-container">
-      <DragAndDrop setDragAndDropText={setDragAndDropText} />
+      {dragAndDropVisibility ? (
+        <DragAndDrop setDragAndDropText={setDragAndDropText} />
+      ) : null}
       {dragAndDropText.length > 1 ? (
         <div className="body-container-elements">
           <h2>Received Text</h2>
@@ -39,10 +46,7 @@ const Body = () => {
             <textarea
               onChange={(e) => handleTextAreaInput(e.target.value)}
             ></textarea>
-            <button
-              className="send-prompt"
-              onClick={() => handlePrompt()}
-            >
+            <button className="send-prompt" onClick={() => handlePrompt()}>
               <IoMdSend />
             </button>
           </div>
