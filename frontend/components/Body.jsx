@@ -22,7 +22,7 @@ const Body = () => {
           promptData: dragAndDropText,
           promptValue: promptValue,
         }
-      );
+      )
       setPromptResponse(getPromptResponse);
       setGeneratedAnswearVisibility(true);
     }
