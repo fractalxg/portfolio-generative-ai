@@ -1,6 +1,7 @@
 import "./Body.css";
 import DragAndDrop from "./DragAndDrop";
 import { IoMdSend } from "react-icons/io";
+import { SlReload } from "react-icons/sl";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -25,6 +26,11 @@ const Body = () => {
     setPromptValue(value);
   };
 
+  const handleReloadFile = () => {
+    setDragAndDropVisibility(true)
+    setDragAndDropText("")
+  }
+
   useEffect(() => {
     dragAndDropText.length > 1 ? setDragAndDropVisibility(false) : null;
   }, [dragAndDropText]);
@@ -39,6 +45,10 @@ const Body = () => {
           <h2>Received Text</h2>
           <div className="body-text-drag-and-drop-container">
             <p>{dragAndDropText}</p>
+            <button className="reload-file" onClick={() => handleReloadFile()}>
+              <p>Reload File</p>
+              <SlReload />
+            </button>
           </div>
 
           <h2>Type your prompt</h2>
