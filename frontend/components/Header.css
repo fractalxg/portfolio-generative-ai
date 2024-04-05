@@ -1,11 +1,26 @@
 .header-container {
     height: 80px;
     width: 100%;
-    position: fixed;
-    top: 0;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    z-index: 2;
-    background-color: var(--color-2);;
+    background-color: var(--color-2);
+    position: fixed;
+    top: 0;
+}
+
+.header-content{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 18vw;
+}
+
+.header-icon {
+    width: 25px;
+    height: 25px;
+    color: #ececec;
+}
+.header-icon:hover {
+    cursor: pointer;
 }

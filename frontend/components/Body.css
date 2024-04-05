@@ -1,7 +1,10 @@
 .body-container {
-  margin-top: 80px;
+  display: grid;
   background-color: var(--color-1);
   width: 100%;
+  height: 80vh;
+  margin-top: 70px;
+  align-items: center;
 }
 
 .body-container h2 {
@@ -99,7 +102,7 @@
 }
 
 .body-generated-answear-content{
-  padding: 20px 40px 80px 40px;
+  padding: 20px 40px 300px 40px;
 }
 
 
