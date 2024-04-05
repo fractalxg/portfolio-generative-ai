@@ -9,4 +9,6 @@ Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos 
 ## Screenshots
 * Web
 
-![Opera Instantâneo_2024-04-03_182021_localhost](https://github.com/fractalxg/portfolio-openai/assets/147837025/616bbec8-deea-4135-9dcd-67bc6a2b9477)
+![web-01](https://github.com/fractalxg/portfolio-openai/assets/147837025/53cb5fc1-600a-42ee-bedb-d088ff9f9d9e)
+![web-02](https://github.com/fractalxg/portfolio-openai/assets/147837025/73c73627-344b-4de9-a5b5-1dff94381b54)
+
