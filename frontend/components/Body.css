@@ -16,7 +16,7 @@
   text-align: justify;
 }
 .body-text-area-container {
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px 90px 40px;
 }
 
 .body-text-area-container textarea {
@@ -71,6 +71,7 @@
   box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
   background-color: #ffffff;
   gap: 10px;
+  z-index: 1;
 }
 .change-file:hover {
   cursor: pointer;
