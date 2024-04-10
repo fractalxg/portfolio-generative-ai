@@ -25,3 +25,14 @@
 .header-icon:hover {
     cursor: pointer;
 }
+
+.header-content-prompt-configuration{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #8d8d8d;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+
+}
