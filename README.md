@@ -3,7 +3,8 @@
 Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos de texto com a LLM da OpenAI. 
 
 ## Funcionalidades
-* Conversão de Arquivos de Texto.
+* Upload de Arquivos de Texto.
+* Configuração de Prompts.
 * Analisador de Texto com o Chat GPT.
 
 ## Screenshots
