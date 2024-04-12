@@ -5,7 +5,7 @@ import { SlReload } from "react-icons/sl";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Body = ({ setConfigVisibility }) => {
+const Body = ({ setConfigVisibility, prePromptOne, prePromptTwo }) => {
   const [dragAndDropText, setDragAndDropText] = useState("");
   const [promptResponse, setPromptResponse] = useState("");
   const [promptValue, setPromptValue] = useState("");

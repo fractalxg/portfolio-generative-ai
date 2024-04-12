@@ -1,9 +1,9 @@
 import "./Header.css";
 import { FaGear } from "react-icons/fa6";
 import { Rotate } from "./utils/Animation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Header = ({ configVisibility }) => {
+const Header = ({ configVisibility, setPrePromptOne, setPrePromptTwo }) => {
   const [promptConfigurationVisibility, setPromptConfigurationVisibility] =
     useState(false);
 
@@ -25,6 +25,12 @@ const Header = ({ configVisibility }) => {
   const handlePromptConfigurationVisibility = () => {
     setPromptConfigurationVisibility(!promptConfigurationVisibility);
   };
+
+  useEffect(() => {
+    prePromptTextOne.length > 0 && prePromptTextTwo.length > 0
+      ? (setPrePromptOne(prePromptTextOne), setPrePromptTwo(prePromptTextTwo))
+      : null;
+  }, [prePromptTextOne, prePromptTextTwo]);
 
   return (
     <div className="header-container">
