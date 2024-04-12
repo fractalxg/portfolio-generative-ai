@@ -1,11 +1,71 @@
 .header-container {
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    z-index: 2;
-    background-color: var(--color-2);;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  z-index: 2;
 }
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 18vw;
+}
+
+.header-icon {
+  width: 25px;
+  height: 25px;
+  color: #8d8d8d;
+}
+.header-icon:hover {
+  cursor: pointer;
+}
+
+.header-content-prompt-configuration {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 200px;
+  height: 245px;
+  margin-top: 30px;
+}
+.header-content-prompt-configuration-content {
+  display: grid;
+  padding: 10px 10px 10px 10px;
+  height: 100%;
+  font-size: 14px;
+  align-items: center;
+}
+
+.pre-prompt-received-text-container{
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 8px;
+}
+.pre-prompt-type-your-prompt-container{
+    padding-top: 8px;
+}
+
+.pre-prompt-text-area {
+  width: 100%;
+  height: 55px;
+  border-color: #ddd;
+}
+
+.pre-prompt-text-area:focus {
+  outline: none;
+}
+.pre-prompt-text-area:hover {
+  border-color: #ddd;
+}
+
+.pre-prompt-radio-button{
+    display: flex;
+    gap: 5px;
+}
+

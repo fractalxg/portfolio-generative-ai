@@ -5,7 +5,7 @@ import { SlReload } from "react-icons/sl";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Body = () => {
+const Body = ({ setConfigVisibility, prePromptOne, prePromptTwo }) => {
   const [dragAndDropText, setDragAndDropText] = useState("");
   const [promptResponse, setPromptResponse] = useState("");
   const [promptValue, setPromptValue] = useState("");
@@ -19,6 +19,8 @@ const Body = () => {
       const getPromptResponse = await axios.post(
         import.meta.env.VITE_PROMPT_API,
         {
+          prePromptOne: prePromptOne,
+          prePromptTwo: prePromptTwo,
           promptData: dragAndDropText,
           promptValue: promptValue,
         }
@@ -45,7 +47,9 @@ const Body = () => {
   };
 
   useEffect(() => {
-    dragAndDropText.length > 1 ? setDragAndDropVisibility(false) : null;
+    dragAndDropText.length > 1
+      ? (setDragAndDropVisibility(false), setConfigVisibility(true))
+      : null;
   }, [dragAndDropText]);
 
   return (
