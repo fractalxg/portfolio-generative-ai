@@ -15,8 +15,8 @@ router.post("/prompt", async (req, res) => {
     message: [
       {
         role: "user",
-        content: `According to the following text:${prompt.promptData}, 
-        Answer the following question:${prompt.promptMessage} `,
+        content: `${prompt.prePromptOne}${prompt.promptData}, 
+        ${prompt.prePromptTwo}${prompt.promptMessage} `,
       },
     ],
     max_tokens: 100,
