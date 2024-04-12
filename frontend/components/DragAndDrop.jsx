@@ -1,7 +1,6 @@
 import "./DragAndDrop.css";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { useDropzone } from "react-dropzone";
-import { useState } from "react";
 
 const DragAndDrop = ({ setDragAndDropText }) => {
   const FileUploader = ({ children }) => {

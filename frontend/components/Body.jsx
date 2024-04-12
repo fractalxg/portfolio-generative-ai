@@ -19,6 +19,8 @@ const Body = ({ setConfigVisibility, prePromptOne, prePromptTwo }) => {
       const getPromptResponse = await axios.post(
         import.meta.env.VITE_PROMPT_API,
         {
+          prePromptOne: prePromptOne,
+          prePromptTwo: prePromptTwo,
           promptData: dragAndDropText,
           promptValue: promptValue,
         }

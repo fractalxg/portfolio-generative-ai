@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const Home = () => {
   const [configVisibility, setConfigVisibility] = useState(false);
-  const [prePromptOne, setPrePromptOne] = useState("");
-  const [prePromptTwo, setPrePromptTwo] = useState("");
+  const [prePromptOne, setPrePromptOne] = useState("According to the following text:");
+  const [prePromptTwo, setPrePromptTwo] = useState("Answer the following question:");
 
   return (
     <div className="home-container">
