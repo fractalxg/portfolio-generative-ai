@@ -105,6 +105,8 @@
 }
 
 .body-generated-answear-content{
+  position: relative;
+  z-index: 2;
   padding: 20px 40px 300px 40px;
 }
 
