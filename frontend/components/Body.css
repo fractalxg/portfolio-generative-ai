@@ -16,7 +16,9 @@
   text-align: justify;
 }
 .body-text-area-container {
+  position: relative;
   padding: 20px 40px 90px 40px;
+  z-index: 1;
 }
 
 .body-text-area-container textarea {
@@ -103,7 +105,15 @@
 }
 
 .body-generated-answear-content{
+  position: relative;
+  z-index: 2;
   padding: 20px 40px 300px 40px;
+}
+
+@media screen and (max-width: 650px) {
+  .body-text-area-container{
+    z-index: 0;
+  }
 }
 
 
