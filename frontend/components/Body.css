@@ -110,4 +110,10 @@
   padding: 20px 40px 300px 40px;
 }
 
+@media screen and (max-width: 650px) {
+  .body-text-area-container{
+    z-index: 0;
+  }
+}
+
 
