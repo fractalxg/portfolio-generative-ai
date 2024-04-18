@@ -114,6 +114,10 @@
   .body-text-area-container{
     z-index: 0;
   }
+  .body-generated-answear-container{
+    position: relative;
+    z-index: 0;
+  }
 }
 
 
