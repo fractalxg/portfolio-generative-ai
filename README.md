@@ -1,4 +1,3 @@
-(em construção)
 ## Descrição
 Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos de texto com a LLM da OpenAI. 
 
@@ -10,9 +9,8 @@ Aplicação Web em ReactJS e NodeJS (REST API + Express) para analisar arquivos 
 ## Screenshots
 * Web
 
-![web-01](https://github.com/fractalxg/portfolio-openai/assets/147837025/c3450067-ecd6-4b8b-ae5d-b1d5cb564549)
-![web-02](https://github.com/fractalxg/portfolio-openai/assets/147837025/7773552b-a657-46ba-a106-206056ec3e24)
-![web-03](https://github.com/fractalxg/portfolio-openai/assets/147837025/b8c37923-4c71-43e3-9e1e-18e156fe0434)
-![web-04](https://github.com/fractalxg/portfolio-openai/assets/147837025/64479edd-fd5c-4996-a86d-e28df2d1c38d)
+![Generative AI - Web](https://github.com/fractalxg/portfolio-generative-ai/assets/147837025/78476b58-2328-4a0b-b32b-0ff9ff7f6fa9)
 
+* Mobile
 
+![Generative AI - Mobile](https://github.com/fractalxg/portfolio-generative-ai/assets/147837025/975be442-c70c-4eb3-b424-211b23fd1102)
