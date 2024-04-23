@@ -12,7 +12,7 @@ router.post("/prompt", async (req, res) => {
   const prompt = req.body;
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-instruct",
-    message: [
+    messages: [
       {
         role: "user",
         content: `${prompt.prePromptOne}${prompt.promptData}, 
@@ -22,7 +22,7 @@ router.post("/prompt", async (req, res) => {
     max_tokens: 100,
     temperature: 0,
   });
-  res.send(response);
+  res.send(response.choices[0]?.message?.content || "Erro ao obter resposta do modelo.");
 });
 
 module.exports = router;
